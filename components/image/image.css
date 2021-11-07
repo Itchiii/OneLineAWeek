@@ -1,0 +1,60 @@
+:host {
+  display: flex;
+  position: relative;
+  visibility: visible !important;
+}
+
+.image-wrapper {
+  align-items: flex-end;
+  box-sizing: border-box;
+  cursor: zoom-in;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 0.8;
+}
+
+.image-wrapper > .overlay {
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 300ms;
+  width: 100%;
+}
+
+#image-wrapper:hover #description::slotted(*) {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+#image-wrapper:hover #image::slotted(*) {
+  animation-name: hideAndShowImage;
+  animation-delay: var(--animationDelay);
+  animation-duration: var(--animationDuration);
+}
+
+#image::slotted(*) {
+  height: 100%;
+  width: 100%;
+}
+
+#description::slotted(*) {
+  opacity: 0;
+  color: #1e1e1e;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1em;
+  position: absolute;
+}
+
+#svg::slotted(*) {
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.05);
+  position: absolute;
+}

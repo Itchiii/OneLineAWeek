@@ -1,0 +1,6 @@
+.logo > img {
+  height: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  width: min(60px, 25%);;
+}
