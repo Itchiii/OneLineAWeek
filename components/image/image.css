@@ -52,6 +52,8 @@
   font-weight: 300;
   margin: 1em;
   position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #svg::slotted(*) {
