@@ -126,6 +126,8 @@ image-component {
 
 .contact--mail {
   margin-top: -1em;
+  color: #000;
+  text-decoration: none;
 }
 
 .contact--github {
